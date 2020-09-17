@@ -10,8 +10,9 @@ public class Manager6 {
      * 没有加final是因为，final必须得初始化
      * 初始化的方式有两种 一种是直接初始化
      * 一种是通过静态代码块初始化
+     * volatile 是为了防止指令重排的一些问题
      */
-    public static Manager6 INSTANCE;
+    public static volatile Manager6 INSTANCE;
 
 
     /**
@@ -24,7 +25,7 @@ public class Manager6 {
      * 按需初始化
      * static synchronized 锁住方法中的某一个代码块，而不是整个方法
      * static 方法是属于整个类的。而不是单个实例的
-     *
+     * 双重检查
      * @return
      */
     public static Manager6 getInstance() {

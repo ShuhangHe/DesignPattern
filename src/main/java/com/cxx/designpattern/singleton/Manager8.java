@@ -3,6 +3,7 @@ package com.cxx.designpattern.singleton;
 /**
  * 枚举单例
  * 不仅可以解决线程问题，还可以防止反序列化
+ * 因为枚举类没有构造方法，所以可以防止序列化
  * 
  */
 public enum Manager8 {
